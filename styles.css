@@ -1,0 +1,234 @@
+/*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
+
+/* Mobile-First Styles (default) */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+}
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-ul {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-ul li a {
+    display: inline-block;
+    color: blue;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav-ul.show {
+    display: flex; 
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+}
+
+.hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+main {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+main img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+main .welcome {
+    justify-content: center;
+}
+
+main > h2 {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 20px;
+}
+
+main .card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+footer p {
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 960px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr); 
+    }
+
+    header {
+        text-align: left; 
+    }
+
+    header .logo {
+        grid-column: span 6;
+    }
+
+    nav {
+        grid-column: span 12;
+        text-align: right;
+    }
+
+    .nav-ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        font-size: large;
+    }
+    .nav-ul li {
+        margin: 0 15px;
+        position: relative;
+    }
+    
+    .nav-ul a {
+        text-decoration: none;
+        color: #333; 
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-ul a:hover {
+        color: red; /* Change this to your desired hover color */
+    }
+
+    .nav-ul li::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        background-color: #007BFF; /* Change this to your desired underline color */
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-ul li:hover::after {
+        width: 100%;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    #welcome {
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #welcome img {
+        grid-column: span 6;
+    }
+
+    #welcome .welcome {
+        grid-column: span 6; 
+        text-align: left; 
+        padding: 20px; 
+    }
+
+    #welcome > h2 {
+        grid-column: span 12;
+    }
+
+    #switcher2 .currentItem { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .25fr 1fr;
+        gap: 1rem;
+    }
+    
+    .hiddenItem {
+        display: none;
+    }
+    
+    #switcher2 {
+        margin-top: 2rem;
+        background-color: #F2F2F2;
+    }
+
+    #switcher2 > h2:first-child {
+        justify-content: center;
+        display: grid;
+        grid-column: span 12;
+    }
+    
+    #switcher2 img {
+        grid-row: 1/-1;
+        grid-column: 2/-1;
+    }
+    
+    #switcher2Buttons{
+        display: grid;
+        gap: 1rem;
+        width: fit-content;
+        position: relative;
+        left: 12%;
+        top: -80px;
+    }
+
+    #switcher2 .buttons {
+        width: 200px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+
