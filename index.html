@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12 Grid Layout</title>
+    <title>Forging Freedom Nutrition & Fitness</title>
     <meta name="author" content="Travis Wiley">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
@@ -35,28 +35,48 @@
         </section>
         <section id="switcher2">
             <h2>Product Switcher Example 2</h2>
-            <section id="product4" class="currentItem">
+            <section id="product1" class="currentItem">
                 <h3>Heading Describing Item 4</h3>
                 <img src="ptrainer.jpg" alt="personal trainer and client">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
-            <section id="product5" class="hiddenItem">
+            <section id="product2" class="hiddenItem">
                 <h3>Heading Describing Item 5</h3>
                 <img src="http://via.placeholder.com/600x400" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
-            <section id="product6" class="hiddenItem">
+            <section id="product3" class="hiddenItem">
                 <h3>Heading Describing Item 6</h3>
                 <img src="http://via.placeholder.com/600x400" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="switcher2Buttons">
                 <h2 class="sr-only">Choose your transformation plan!</h2>
-                <button class="buttons" id="btn4">Basic</button>
-                <button class="buttons" id="btn5">Pro</button>
-                <button class="buttons" id="btn6">Elite</button>
-
+                <button class="buttons" id="btn1">Basic</button>
+                <button class="buttons" id="btn2">Pro</button>
+                <button class="buttons" id="btn3">Elite</button>
             </section>
+        </section>
+
+        <section id="game2">
+            <div>
+                <h2>Guessing Game Example 2</h2>
+                <p>Enter a number between 1 and 10 in the box below and click the button to play. If your number matches, you win!</p>
+                <form>
+                    <label for="numGuess2">Enter a Number Between 1 and 10:</label>
+                    <span class="message">Please enter a number from 1 to 10</span>
+                    <input type="number" name="numGuess2" id="numGuess2">
+                    <input type="submit" name="guessGame2" id="guessGame2" value="Play the Game!">
+                </form>
+                <section id="gameDisplay2">
+                    <h3 class="sr-only">Guess a Number!</h3>
+                    <ul id="gameOutput2">
+                        <li id="userNum"><span>5</span>Your Guess</li>
+                        <li id="randomNum"><span>10</span>Winning Number</li>
+                    </ul>
+                    <p id="game2Msg">Message about winning or losing the game</p>
+                </section>
+            </div>
         </section>
 
         <h2>Services</h2>
