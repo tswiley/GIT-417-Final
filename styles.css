@@ -137,7 +137,7 @@ footer p {
     }
     
     .nav-ul a:hover {
-        color: red; /* Change this to your desired hover color */
+        color: red; 
     }
 
     .nav-ul li::after {
@@ -145,7 +145,7 @@ footer p {
         display: block;
         height: 2px;
         width: 0;
-        background-color: #007BFF; /* Change this to your desired underline color */
+        background-color: #007BFF; 
         position: absolute;
         bottom: -5px;
         left: 0;
@@ -164,7 +164,6 @@ footer p {
         max-width: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        background-color: #8A9A5B;
     }
 
     #welcome img {
@@ -265,11 +264,67 @@ footer p {
         justify-content: center;
     }
 
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+    /* Apply styles to the form container */
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
+
+    /* Apply styles to labels */
+    form label {
+        font-weight: bold;
+    }
+
+    /* Apply styles to input fields and textarea */
+    form input[type="text"],
+    form input[type="tel"],
+    form input[type="email"],
+    form textarea {
+        width: 300px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+
+    /* Apply styles to the radio buttons and labels for Preferred Contact Methods */
+    form .contact-methods input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    form .contact-methods label {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    /* Apply styles to the submit button */
+    form button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Apply styles to error messages */
+    form .error-message {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+
 }
 
 
