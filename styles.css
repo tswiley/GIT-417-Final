@@ -66,6 +66,8 @@ nav {
 
 main {
     max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 main img {
@@ -207,12 +209,10 @@ footer p {
     }
     
     #switcher2Buttons{
-        display: grid;
         gap: 1rem;
-        width: fit-content;
-        position: relative;
-        left: 12%;
-        top: -80px;
+        display: grid;
+        grid-row: 2/-1;
+        justify-content: center;
     }
 
     #switcher2 .buttons {
