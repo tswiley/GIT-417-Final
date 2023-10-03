@@ -17,9 +17,10 @@
         </div>
         <nav class="nav-ul">
             <ul id="nav-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contactUs" id="contactLink">Contact</a></li>
             </ul>
         </nav>
 
@@ -32,11 +33,11 @@
         <section id="welcome">
             <section id="heading">
             <h2>Fitness and Nutrition Plans Customized For You</h2>
-                <p>Scientifaclly Proven Methods - 100% Online Programs</p>
+                <p>Scientifically Proven Methods - 100% Online Programs</p>
             </section>
             <img src="trainer.jpg" alt="personal trainer">
             <div class="welcome">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iure sed omnis quisquam magnam harum temporibus non sequi aliquam? Repudiandae?</p>
+                <p>At Forging Freedom, we specialize in coaching you how to eat to get the results you want. With our macro based approach, we are able to use proven scientific methods to transform how you look and feel.</p>
             </div>
         </section>
         <section id="switcher2">
@@ -45,31 +46,32 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi quas eligendi eum vel dolorum iure sit molestiae neque sapiente?</p>
             </section>
             <section id="product1" class="currentItem">
-                <h3>Heading Describing Item 1</h3>
+                <h3>Fitness Program</h3>
                 <img src="ptrainer.jpg" alt="personal trainer and client">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="product2" class="hiddenItem">
-                <h3>Heading Describing Item 2</h3>
+                <h3>Nutrition Program</h3>
                 <img src="foodprep.jpg" alt="woman with bowl of health food">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="product3" class="hiddenItem">
-                <h3>Heading Describing Item 3</h3>
+                <h3>Transformation Program</h3>
                 <img src="coupleropes.jpg" alt="man and womon using ropes workout">
-                <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                    At Forging Freedom, we specialize in coaching you how to eat to get the results you want. Every workout is created for you and adaptable with any limitations you might have. This program can be tailored for someone who has never stepped in to a gym and for the seasoned athlete.</p>
             </section>
             <section id="product4" class="hiddenItem">
-                <h3>Heading Describing Item 4</h3>
+                <h3>Kids Program</h3>
                 <img src="kids.jpg" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="switcher2Buttons">
                 <h2>Choose your transformation plan!</h2>
                 <section id="planButtons">
-                    <button class="buttons" id="btn1">Fitness Plan</button>
-                    <button class="buttons" id="btn2">Nutrition Plan</button>
-                    <button class="buttons" id="btn3">Transformation Plan</button>
+                    <button class="buttons" id="btn1">Fitness Program</button>
+                    <button class="buttons" id="btn2">Nutrition Program</button>
+                    <button class="buttons" id="btn3">Transformation Program</button>
                     <button class="buttons" id="btn4">Kids Program</button>
                 </section>
             </section>
@@ -77,10 +79,10 @@
 
         <section id="game1">
                 <section id="heading">
-                    <h2>Play For A Chance At 10% Your First Month</h2>
+                    <h2>Play For A Chance At 10% Off Your First Month</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi quas eligendi eum vel dolorum iure sit molestiae neque sapiente?</p>
                     </section>
-                <form>
+                <form id="guessForm">
                     <label for="numGuess">Enter a Number Between 1 and 10:</label>
                     <input type="number" name="numGuess" id="numGuess">
                     <input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
@@ -90,10 +92,10 @@
                     <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win!</p>
                     <p id="gameOutput">This is where the random number and user guess would display, along with a message about whether they won or not.</p>
                 </section>
-	</section>
+	    </section>
     </main>
 
-    <div class="contactUs">
+    <div class="contactUs" id="contactUs">
         <section id="heading">
             <h2>Contact Us</h2>
         </section>

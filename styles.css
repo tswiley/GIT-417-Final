@@ -1,6 +1,9 @@
 /*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
 
+body {
+    cursor: default;
+}
 .header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -62,6 +65,13 @@
 .nav-ul li:hover::after {
     width: 100%;
 }
+
+#contactLink {
+    border: 2px solid red;
+    padding: 8px;
+    border-radius: 6px;
+}
+
 
 .mode-button {
     border: 2px solid black; 
@@ -144,6 +154,11 @@ main {
     max-width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.gym-pic {
+    max-width: 1280px;
+    height: auto;
 }
 
 main img {
@@ -300,13 +315,13 @@ main > h2 {
     padding-bottom: 25px;
 }
 
-#game1 form {
+#game1 #guessForm {
     grid-column: span 12;
     padding: 1rem;
     align-items: center;
 }
 
-#game1 label {
+#game1 p {
     color: black;
 }
 
@@ -314,7 +329,7 @@ main > h2 {
     grid-column: span 12;
 }
 #gameDisplay p {
-    text-align: left;
+    text-align: center;
 }
 
 #numGuess {

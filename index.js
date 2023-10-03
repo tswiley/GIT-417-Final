@@ -1,6 +1,36 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+    const contactLink = document.querySelector('a[href="#programs"]');
+
+    contactLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const contactSection = document.querySelector('#switcher2');
+        const offsetTop = contactSection.offsetTop;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactLink = document.querySelector('a[href="#contactUs"]');
+
+    contactLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const contactSection = document.querySelector('#contactUs');
+        const offsetTop = contactSection.offsetTop;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     const modeSwitchButton = document.getElementById("modeSwitchButton");
     const modeIcon = document.getElementById("modeIcon");
 
@@ -37,24 +67,34 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const guessButton = document.getElementById("guessGame");
-    const numGuessInput = document.getElementById("numGuess");
+
+let y = Math.floor(Math.random() * 10 + 1);
+
+let guess = 1;
+
+document.getElementById("guessGame").onclick = function () {
+ 
+    let x = parseInt(document.getElementById("numGuess").value);
     const gameOutput = document.getElementById("gameOutput");
 
-    guessButton.addEventListener("click", function () {
-        function playGame() {
-            const userGuess = parseInt(numGuessInput.value);
-            const randomNumber = Math.floor(Math.random() * 10) + 1;
+    if (x == y) {
+        gameOutput.textContent = "CONGRATULATIONS!!! Your discount code is: fitlife2024";
+    } else if (x > y) {
+        guess++;
+        gameOutput.textContent = "OOPS SORRY!! TRY A SMALLER NUMBER";
+    } else {
+        guess++;
+        gameOutput.textContent = "OOPS SORRY!! TRY A GREATER NUMBER";
+    }
 
-            if (userGuess === randomNumber) {
-                gameOutput.textContent = `Congratulations! You guessed correctly (${userGuess}). You win!`;
-            } else {
-                gameOutput.textContent = `Sorry, the correct number was ${randomNumber}. Try again.`;
-            }
-        }
+    document.getElementById("numGuess").value = "";
+    return false;
+}
 
-        playGame();
-    });
+    
+    
+    
+
 
     const form = document.getElementById("contact-form");
     const nameInput = document.getElementById("name");
