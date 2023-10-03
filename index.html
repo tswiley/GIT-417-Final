@@ -23,25 +23,27 @@
             </ul>
         </nav>
 
-        <button id="modeSwitchButton">
+        <button id="modeSwitchButton" class="mode-button">
             <span id="modeIcon" class="fas fa-moon"></span>
         </button>
     </header>
     
-    
-    
-    </header>
-    
     <main class="main-grid">
         <section id="welcome">
+            <section id="heading">
+            <h2>Fitness and Nutrition Plans Customized For You</h2>
+                <p>Scientifaclly Proven Methods - 100% Online Programs</p>
+            </section>
             <img src="trainer.jpg" alt="personal trainer">
             <div class="welcome">
-                <h2>Welcome</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iure sed omnis quisquam magnam harum temporibus non sequi aliquam? Repudiandae?</p>
             </div>
         </section>
         <section id="switcher2">
-            <h2>Product Switcher Example 2</h2>
+            <section id="heading">
+            <h2>Fully Customized Plans Based On Your Needs</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi quas eligendi eum vel dolorum iure sit molestiae neque sapiente?</p>
+            </section>
             <section id="product1" class="currentItem">
                 <h3>Heading Describing Item 1</h3>
                 <img src="ptrainer.jpg" alt="personal trainer and client">
@@ -64,16 +66,20 @@
             </section>
             <section id="switcher2Buttons">
                 <h2>Choose your transformation plan!</h2>
-                <button class="buttons" id="btn1">Fitness Plan</button>
-                <button class="buttons" id="btn2">Nutrition Plan</button>
-                <button class="buttons" id="btn3">Transformation Plan</button>
-                <button class="buttons" id="btn4">Kids Program</button>
+                <section id="planButtons">
+                    <button class="buttons" id="btn1">Fitness Plan</button>
+                    <button class="buttons" id="btn2">Nutrition Plan</button>
+                    <button class="buttons" id="btn3">Transformation Plan</button>
+                    <button class="buttons" id="btn4">Kids Program</button>
+                </section>
             </section>
         </section>
 
         <section id="game1">
-            <div>
-            <h2>Guessing Game Example 1</h2>
+                <section id="heading">
+                    <h2>Play For A Chance At 10% Your First Month</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi quas eligendi eum vel dolorum iure sit molestiae neque sapiente?</p>
+                    </section>
                 <form>
                     <label for="numGuess">Enter a Number Between 1 and 10:</label>
                     <input type="number" name="numGuess" id="numGuess">
@@ -84,12 +90,13 @@
                     <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win!</p>
                     <p id="gameOutput">This is where the random number and user guess would display, along with a message about whether they won or not.</p>
                 </section>
-		</div>
 	</section>
     </main>
 
-    <div class="container">
-        <h1>Contact Us</h1>
+    <div class="contactUs">
+        <section id="heading">
+            <h2>Contact Us</h2>
+        </section>
         <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name:</label>
