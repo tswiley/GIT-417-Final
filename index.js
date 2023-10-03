@@ -17,10 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedProduct.classList.add("currentItem");
         });
     });
-});
 
-
-document.addEventListener("DOMContentLoaded", function () {
     const guessButton = document.getElementById("guessGame");
     const numGuessInput = document.getElementById("numGuess");
     const gameOutput = document.getElementById("gameOutput");
@@ -39,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         playGame();
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const nameInput = document.getElementById("name");
     const phoneInput = document.getElementById("phone");
@@ -100,11 +95,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
-
-
-
-
-
-

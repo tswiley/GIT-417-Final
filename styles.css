@@ -1,43 +1,18 @@
 /*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
 
-/* Mobile-First Styles (default) */
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #FFFF;
-}
-
 .grid {
     display: grid;
     gap: 30px;
+    grid-template-columns: repeat(12, 1fr); 
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;;
+header {
+    text-align: left; 
 }
 
-.nav-ul {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-ul li a {
-    display: inline-block;
-    color: blue;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.nav-ul.show {
-    display: flex; 
+header .logo {
+    grid-column: span 6;
 }
 
 .logo {
@@ -45,23 +20,47 @@ nav {
     height: 100px;
 }
 
-.hamburger-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 18px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+nav {
+    grid-column: span 12;
+    text-align: right;
 }
 
-.hamburger-line {
+.nav-ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: large;
+}
+.nav-ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-ul a {
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-ul a:hover {
+    color: red; 
+}
+
+.nav-ul li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #007BFF; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-ul li:hover::after {
     width: 100%;
-    height: 3px;
-    background-color: #333;
-    transition: 0.4s;
 }
 
 main {
@@ -85,12 +84,162 @@ main > h2 {
     padding-top: 20px;
 }
 
-main .card {
-    background-color: #fff;
-    padding: 10px;
+#welcome {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#welcome img {
+    grid-column: span 6;
+}
+
+#welcome .welcome {
+    grid-column: span 6; 
+    text-align: left; 
+    padding: 20px; 
+}
+
+#welcome > h2 {
+    grid-column: span 12;
+}
+
+#switcher2 .currentItem { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr 1fr;
+    gap: 1rem;
+}
+
+.hiddenItem {
+    display: none;
+}
+
+#switcher2 {
+    margin-top: 2rem;
+    background-color: white;
+}
+
+#switcher2 > h2:first-child {
+    justify-content: center;
+    display: grid;
+    grid-column: span 12;
+}
+
+#switcher2 img {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+}
+
+#switcher2Buttons{
+    gap: 1rem;
+    display: grid;
+    grid-row: 2/-1;
+    justify-content: center;
+}
+
+#switcher2 .buttons {
+    width: 200px;
+    height: 40px;
     border-radius: 6px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+}
+
+#game1{
+    margin-top: 2rem;	
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+#game1 div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#game1 h2{
+    grid-column: 1/-1;
+}
+
+#game1 form{
+    padding: 1rem;
+    align-items: center;
+}
+
+#gameDisplay p{
+    text-align: left;
+}
+
+#numGuess {
+    width: 300px;
+    font-size: large;
+    margin-top: 5px;
+}
+
+#guessGame {
+    background-color: black;
+    color: #FFFF;
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    justify-content: center;
+}
+
+form {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f4f4f4;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+text-align: center;
+}
+
+form label {
+font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form textarea {
+width: 300px;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin: 10px 0;
+}
+
+form .contact-methods input[type="radio"] {
+margin-right: 5px;
+}
+
+form .contact-methods label {
+display: inline-block;
+margin-right: 20px;
+}
+
+form button {
+background-color: #007BFF;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+form button:hover {
+background-color: #0056b3;
+}
+
+form .error-message {
+color: red;
+font-size: 0.8rem;
+margin-top: 5px;
 }
 
 footer p {
@@ -98,233 +247,3 @@ footer p {
     place-items: center;
     margin: 10px;
 }
-
-/* Media Query for Larger Screens */
-@media screen and (min-width: 960px) {
-    .grid {
-        grid-template-columns: repeat(12, 1fr); 
-    }
-
-    header {
-        text-align: left; 
-    }
-
-    header .logo {
-        grid-column: span 6;
-    }
-
-    nav {
-        grid-column: span 12;
-        text-align: right;
-    }
-
-    .nav-ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        font-size: large;
-    }
-    .nav-ul li {
-        margin: 0 15px;
-        position: relative;
-    }
-    
-    .nav-ul a {
-        text-decoration: none;
-        color: #333; 
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-    
-    .nav-ul a:hover {
-        color: red; 
-    }
-
-    .nav-ul li::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 0;
-        background-color: #007BFF; 
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        transition: width 0.3s ease;
-    }
-    
-    .nav-ul li:hover::after {
-        width: 100%;
-    }
-
-    .hamburger-button {
-        display: none;
-    }
-
-    #welcome {
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    #welcome img {
-        grid-column: span 6;
-    }
-
-    #welcome .welcome {
-        grid-column: span 6; 
-        text-align: left; 
-        padding: 20px; 
-    }
-
-    #welcome > h2 {
-        grid-column: span 12;
-    }
-
-    #switcher2 .currentItem { 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .25fr 1fr;
-        gap: 1rem;
-    }
-    
-    .hiddenItem {
-        display: none;
-    }
-    
-    #switcher2 {
-        margin-top: 2rem;
-        background-color: white;
-    }
-
-    #switcher2 > h2:first-child {
-        justify-content: center;
-        display: grid;
-        grid-column: span 12;
-    }
-    
-    #switcher2 img {
-        grid-row: 1/-1;
-        grid-column: 2/-1;
-    }
-    
-    #switcher2Buttons{
-        gap: 1rem;
-        display: grid;
-        grid-row: 2/-1;
-        justify-content: center;
-    }
-
-    #switcher2 .buttons {
-        width: 200px;
-        height: 40px;
-        border-radius: 6px;
-        background-color: black;
-        color: white;
-    }
-
-    #game1{
-        margin-top: 2rem;	
-        padding-bottom: 2rem;
-        text-align: center;
-    }
-    
-    #game1 div{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    #game1 h2{
-        grid-column: 1/-1;
-    }
-    
-    #game1 form{
-        padding: 1rem;
-        align-items: center;
-    }
-    
-    #gameDisplay p{
-        text-align: left;
-    }
-
-    #numGuess {
-        width: 300px;
-        font-size: large;
-        margin-top: 5px;
-    }
-
-    #guessGame {
-        background-color: black;
-        color: #FFFF;
-        display: flex;
-        padding: 10px;
-        width: 200px;
-        justify-content: center;
-    }
-
-    /* Apply styles to the form container */
-    form {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
-
-    /* Apply styles to labels */
-    form label {
-        font-weight: bold;
-    }
-
-    /* Apply styles to input fields and textarea */
-    form input[type="text"],
-    form input[type="tel"],
-    form input[type="email"],
-    form textarea {
-        width: 300px;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 10px 0;
-    }
-
-    /* Apply styles to the radio buttons and labels for Preferred Contact Methods */
-    form .contact-methods input[type="radio"] {
-        margin-right: 5px;
-    }
-
-    form .contact-methods label {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    /* Apply styles to the submit button */
-    form button {
-        background-color: #007BFF;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    form button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Apply styles to error messages */
-    form .error-message {
-        color: red;
-        font-size: 0.8rem;
-        margin-top: 5px;
-    }
-
-
-}
-
-
