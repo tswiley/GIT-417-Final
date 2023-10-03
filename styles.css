@@ -1,9 +1,10 @@
 /*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
 
-body {
-    cursor: default;
+html {
+    cursor: pointer;
 }
+
 .header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -50,18 +51,6 @@ body {
     color: red;
 }
 
-.nav-ul li::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #007BFF;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
 .nav-ul li:hover::after {
     width: 100%;
 }
@@ -71,7 +60,6 @@ body {
     padding: 8px;
     border-radius: 6px;
 }
-
 
 .mode-button {
     border: 2px solid black; 
@@ -146,6 +134,14 @@ body {
     color: black;
 }
 
+.dark-mode #game1 label[for="numGuess"] {
+    color: black;
+}
+
+.dark-mode #game1 p {
+    color: white;
+}
+
 .dark-mode #contact-form {
     color: black;
 }
@@ -196,7 +192,7 @@ main > h2 {
 #welcome #heading  {
     display: grid;
     grid-column: span 12;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
     justify-items: center;
 }
 
@@ -219,7 +215,7 @@ main > h2 {
 #switcher2 #heading  {
     display: grid;
     grid-column: span 12;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     justify-items: center;
 }
 
@@ -250,7 +246,7 @@ main > h2 {
 }
 
 #switcher2 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 100px;
 }
 
@@ -424,8 +420,131 @@ font-size: 0.8rem;
 margin-top: 5px;
 }
 
-footer p {
-    display: grid;
-    place-items: center;
-    margin: 10px;
+/* Footer Styles */
+footer {
+    background-color: #333; /* Change to your desired background color */
+    color: #fff; 
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure the footer takes the full width */
+}
+
+/* Left Column Styles */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+    flex: 1; /* Take half of the available width */
+}
+
+.footer-logo {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 10px;
+    fill: #fff; /* Set the color of the SVG logo to white */
+    filter: invert(1);
+}
+
+.join-button {
+    background-color: #ff5722; /* Change to your desired button color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin to separate the button from the paragraph */
+}
+
+.join-button:hover {
+    background-color: #e64a19; /* Change to your desired button hover color */
+}
+
+/* Right Column Styles */
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+    flex: 1; /* Take half of the available width */
+}
+
+.right-content h3 {
+    margin-bottom: 10px; /* Add margin below the header */
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+/* Social Media Icons Styles */
+.social-media-icons {
+    display: flex;
+    flex-direction: column; /* Arrange icons vertically */
+    align-items: center; /* Center icons horizontally */
+    width: 100%; /* Ensure icons take the full width */
+}
+
+.social-media-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0; /* Reduce space between icons vertically */
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.arrow-circle {
+    background-color: #fff; /* White background color */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0074D9; /* Blue border */
+}
+
+.arrow-circle:hover {
+    background-color: #fff; /* Maintain white background color on hover */
+}
+
+.arrow-circle i {
+    color: #0074D9; /* Blue arrow color */
+    font-size: 20px;
+}
+
+
+
+.back-to-top a {
+    background-color: #333; /* Change to your desired button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    background-color: #555; /* Change to your desired button hover color */
+}
+
+/* Show the Back to Top button when scrolling */
+body {
+    position: relative;
+}
+
+
+
+

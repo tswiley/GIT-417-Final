@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modeSwitchButton.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
 
-        // Toggle the icon based on the current mode
         if (document.body.classList.contains("dark-mode")) {
             modeIcon.classList.remove("fa-moon");
             modeIcon.classList.add("fa-sun");
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const productButtons = document.querySelectorAll(".buttons");
@@ -67,40 +65,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    let y = Math.floor(Math.random() * 10 + 1);
+    let guess = 1;
 
-let y = Math.floor(Math.random() * 10 + 1);
+    document.getElementById("guessGame").addEventListener("click", function (e) {
+        e.preventDefault();
 
-let guess = 1;
+        const x = parseInt(document.getElementById("numGuess").value);
+        const gameOutput = document.getElementById("gameOutput");
 
-document.getElementById("guessGame").onclick = function () {
- 
-    let x = parseInt(document.getElementById("numGuess").value);
-    const gameOutput = document.getElementById("gameOutput");
+        if (x == y) {
+            gameOutput.textContent = "CONGRATULATIONS!!! Your discount code is: fitlife2024";
+        } else if (x > y) {
+            guess++;
+            gameOutput.textContent = "OOPS SORRY!! TRY A SMALLER NUMBER";
+        } else {
+            guess++;
+            gameOutput.textContent = "OOPS SORRY!! TRY A GREATER NUMBER";
+        }
 
-    if (x == y) {
-        gameOutput.textContent = "CONGRATULATIONS!!! Your discount code is: fitlife2024";
-    } else if (x > y) {
-        guess++;
-        gameOutput.textContent = "OOPS SORRY!! TRY A SMALLER NUMBER";
-    } else {
-        guess++;
-        gameOutput.textContent = "OOPS SORRY!! TRY A GREATER NUMBER";
-    }
-
-    document.getElementById("numGuess").value = "";
-    return false;
-}
-
-    
-    
-    
-
+        document.getElementById("numGuess").value = "";
+    });
 
     const form = document.getElementById("contact-form");
     const nameInput = document.getElementById("name");
     const phoneInput = document.getElementById("phone");
     const emailInput = document.getElementById("email");
-    const contactMethodInputs = document.querySelectorAll('input[name="contact-method"]'); 
+    const contactMethodInputs = document.querySelectorAll('input[name="contact-method"]');
     const commentsTextarea = document.getElementById("comments");
 
     const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
@@ -146,9 +137,27 @@ document.getElementById("guessGame").onclick = function () {
         }
 
         if (hasErrors) {
-            event.preventDefault(); 
+            event.preventDefault();
         } else {
             alert("Thank you for contacting us! We look forward to working with you. Don't forget to add us on social media!");
         }
     });
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("back-to-top-button");
+
+    if (backToTopButton) {
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            scrollToTop();
+        });
+    }
 });
