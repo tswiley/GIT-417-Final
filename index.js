@@ -60,17 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const phoneInput = document.getElementById("phone");
     const emailInput = document.getElementById("email");
-    const contactMethodInputs = document.querySelectorAll('input[name="contact-method"]'); // Select all radio buttons
+    const contactMethodInputs = document.querySelectorAll('input[name="contact-method"]'); 
     const commentsTextarea = document.getElementById("comments");
 
-    // Regular expressions for format validation
     const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     form.addEventListener("submit", function (event) {
         let hasErrors = false;
 
-        // Reset error messages
         document.querySelectorAll(".error-message").forEach(function (error) {
             error.textContent = "";
         });
@@ -108,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (hasErrors) {
-            event.preventDefault(); // Prevent form submission if there are errors
+            event.preventDefault(); 
         } else {
             alert("Thank you for contacting us! We look forward to working with you. Don't forget to add us on social media!");
         }

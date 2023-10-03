@@ -306,6 +306,10 @@ main > h2 {
     align-items: center;
 }
 
+#game1 label {
+    color: black;
+}
+
 #gameDisplay {
     grid-column: span 12;
 }
@@ -329,14 +333,14 @@ main > h2 {
     justify-content: center;
 }
 
-#contactUs #heading  {
+.contactUs #heading  {
     display: grid;
     grid-column: span 12;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     justify-items: center;
 }
 
-#contactUs #heading h2 {
+.contactUs #heading h2 {
     grid-column: span 12;
     font-size: 50px;
     justify-self: center;
@@ -344,7 +348,7 @@ main > h2 {
     padding-bottom: 25px;
 }
 
-#contactUs #heading p {
+.contactUs #heading p {
     grid-column: span 12;
     font-size: 20px;
     margin: 0;    
