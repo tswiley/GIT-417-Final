@@ -1,6 +1,25 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+    const modeSwitchButton = document.getElementById("modeSwitchButton");
+    const modeIcon = document.getElementById("modeIcon");
+
+    modeSwitchButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        // Toggle the icon based on the current mode
+        if (document.body.classList.contains("dark-mode")) {
+            modeIcon.classList.remove("fa-moon");
+            modeIcon.classList.add("fa-sun");
+        } else {
+            modeIcon.classList.remove("fa-sun");
+            modeIcon.classList.add("fa-moon");
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const productButtons = document.querySelectorAll(".buttons");
     const productSections = document.querySelectorAll("#switcher2 > section");
 

@@ -1,50 +1,50 @@
 /*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
 
-.grid {
+.header {
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(12, 1fr); 
-}
-
-header {
-    text-align: left; 
-}
-
-header .logo {
-    grid-column: span 6;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    padding: 10px;
 }
 
 .logo {
+    grid-column: span 4;
+    text-align: left;
+}
+
+.forging-freedom-logo {
     width: 200px;
     height: 100px;
 }
 
-nav {
-    grid-column: span 12;
-    text-align: right;
+.nav-ul {
+    display: grid;
+    grid-column: span 8;
+    justify-self: end;
 }
 
-.nav-ul {
-    padding: 0;
+.nav-ul ul {
     list-style: none;
     display: flex;
-    font-size: large;
+    gap: 50px;
 }
+
 .nav-ul li {
-    margin: 0 15px;
-    position: relative;
+    margin: 0;
 }
 
 .nav-ul a {
     text-decoration: none;
-    color: #333; 
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 20px;
+    color: blue;
+    padding: 10px 20px;
+    text-decoration: none;
 }
 
 .nav-ul a:hover {
-    color: red; 
+    color: red;
 }
 
 .nav-ul li::after {
@@ -52,7 +52,7 @@ nav {
     display: block;
     height: 2px;
     width: 0;
-    background-color: #007BFF; 
+    background-color: #007BFF;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -61,6 +61,51 @@ nav {
 
 .nav-ul li:hover::after {
     width: 100%;
+}
+
+/* Light Mode CSS */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode #modeSwitchButton {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.light-mode #modeIcon {
+    color: #FFD700; /* Yellow for sun */
+}
+
+/* Dark Mode CSS */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode #switcher2 {
+    background-color: black;
+}
+/* Change text color to white */
+.dark-mode body,
+.dark-mode #switcher2 h2,
+.dark-mode #switcher2 h3,
+.dark-mode #switcher2 p {
+    color: white; /* Change text color to white */
+}
+
+/* Change button boxes to white with black letters */
+.dark-mode #switcher2 .buttons {
+    background-color: white;
+    color: black;
 }
 
 main {
@@ -117,7 +162,6 @@ main > h2 {
 
 #switcher2 {
     margin-top: 2rem;
-    background-color: white;
 }
 
 #switcher2 > h2:first-child {

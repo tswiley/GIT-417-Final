@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forging Freedom Nutrition & Fitness</title>
     <meta name="author" content="Travis Wiley">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
 </head>
 
 <body>
-    <header class ="grid">
-		<nav>
-            <img src="FFlogo.png" alt="logo" class="forging freedom logo"> 
-            <button id="hamburger" class="hamburger-button">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <ul class="nav-ul" id="nav-ul">
+    <header class="header">
+        <div class="logo">
+            <img src="FFlogo.png" alt="logo" class="forging-freedom-logo">
+        </div>
+        <nav class="nav-ul">
+            <ul id="nav-ul">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-		</nav>
+        </nav>
+
+        <button id="modeSwitchButton">
+            <span id="modeIcon" class="fas fa-moon"></span>
+        </button>
     </header>
+    
+    
+    
+    </header>
+    
     <main class="main-grid">
         <section id="welcome">
             <img src="trainer.jpg" alt="personal trainer">
@@ -56,7 +63,7 @@
                 <p>Paragraph describing item (or list or whatever makes the most semantic sense). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="switcher2Buttons">
-                <h2 class="sr-only">Choose your transformation plan!</h2>
+                <h2>Choose your transformation plan!</h2>
                 <button class="buttons" id="btn1">Fitness Plan</button>
                 <button class="buttons" id="btn2">Nutrition Plan</button>
                 <button class="buttons" id="btn3">Transformation Plan</button>
