@@ -42,7 +42,7 @@ html {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    color: blue;
+    color: #ff5722;
     padding: 10px 20px;
     text-decoration: none;
 }
@@ -56,7 +56,7 @@ html {
 }
 
 #contactLink {
-    border: 2px solid red;
+    border: 2px solid blue;
     padding: 8px;
     border-radius: 6px;
 }
@@ -272,9 +272,11 @@ main > h2 {
 #switcher2 .buttons {
     width: 200px;
     height: 40px;
-    border-radius: 6px;
-    background-color: black;
-    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: black;
+    font-weight: bold;
 }
 
 #game1 {
@@ -336,8 +338,11 @@ main > h2 {
 
 #guessGame {
     grid-column: span 12;
-    background-color: black;
-    color: #FFFF;
+    background-color: #ff5722;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
     margin-top: 20px;
     padding: 10px;
     width: 200px;
@@ -401,8 +406,9 @@ margin-right: 20px;
 }
 
 form button {
-background-color: #007BFF;
-color: #fff;
+background-color: #ff5722;
+color: black;
+font-weight: bold;
 padding: 10px 20px;
 border: none;
 border-radius: 5px;
