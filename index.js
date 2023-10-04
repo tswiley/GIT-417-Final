@@ -1,48 +1,29 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contactLink = document.querySelector('a[href="#programs"]');
+    // Hide the gameOutput element
+    const gameOutput = document.getElementById("gameOutput");
+    gameOutput.style.display = "none";
 
+    const contactLink = document.querySelector('a[href="#programs"]');
     contactLink.addEventListener('click', function (e) {
         e.preventDefault();
-        const contactSection = document.querySelector('#switcher2');
-        const offsetTop = contactSection.offsetTop;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+        scrollToSection('#switcher2');
     });
 
     const joinUsButton = document.querySelector('.join-button');
     joinUsButton.addEventListener('click', function (e) {
         e.preventDefault();
-        const switcher2Section = document.querySelector('#switcher2');
-        const offsetTop = switcher2Section.offsetTop;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+        scrollToSection('#switcher2');
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const contactLink = document.querySelector('a[href="#contactUs"]');
-
-    contactLink.addEventListener('click', function (e) {
+    // Add this code for smooth scrolling for the contact button at the top
+    const contactLinkTop = document.querySelector('a[href="#contactUs"]');
+    contactLinkTop.addEventListener('click', function (e) {
         e.preventDefault();
-        const contactSection = document.querySelector('#contactUs');
-        const offsetTop = contactSection.offsetTop;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+        scrollToSection('#contactUs');
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const modeSwitchButton = document.getElementById("modeSwitchButton");
     const modeIcon = document.getElementById("modeIcon");
 
@@ -57,9 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modeIcon.classList.add("fa-moon");
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const productButtons = document.querySelectorAll(".buttons");
     const productSections = document.querySelectorAll("#switcher2 > section");
 
@@ -96,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gameOutput.textContent = "OOPS SORRY!! TRY A GREATER NUMBER";
         }
 
+        gameOutput.style.display = "block"; // Show the gameOutput
         document.getElementById("numGuess").value = "";
     });
 
@@ -158,16 +138,26 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reset();
         }
     });
-});
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            const offsetTop = section.offsetTop;
 
-document.addEventListener("DOMContentLoaded", function () {
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
     const backToTopButton = document.getElementById("back-to-top-button");
 
     if (backToTopButton) {
