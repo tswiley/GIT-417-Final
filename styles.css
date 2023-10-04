@@ -251,12 +251,8 @@ main > h2 {
 }
 
 
-#switcher2 #heading2 p {
-    grid-column: span 12;
-    font-size: 20px;
-    margin: 0;    
-    padding-bottom: 25px;
-}
+
+
 
 #switcher2 .currentItem { 
     display: grid;
@@ -266,7 +262,7 @@ main > h2 {
     margin: 10px 10px;
 }
 
-#switcher2 .currentItem {
+#switcher2 .currentItem h3 {
     justify-items: right;
 }
 
@@ -280,6 +276,13 @@ main > h2 {
 #switcher2 .currentItem p {
     font-size: 20px;
     margin: 0;
+}
+
+#switcher2 ul {
+    justify-self: center;
+    color: #0056b3;
+    list-style: none;
+    font-size: 25px;
 }
 
 .hiddenItem {
