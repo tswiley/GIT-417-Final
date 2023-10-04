@@ -402,6 +402,10 @@ display: inline-block;
 margin-right: 20px;
 }
 
+form .contact-methods {
+    padding-bottom: 20px;
+}
+
 form button {
 background-color: #ff5722;
 color: black;
