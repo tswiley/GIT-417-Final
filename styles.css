@@ -420,9 +420,9 @@ font-size: 0.8rem;
 margin-top: 5px;
 }
 
-/* Footer Styles */
+
 footer {
-    background-color: #333; /* Change to your desired background color */
+    background-color: #333; 
     color: #fff; 
     margin-top: 100px;
     padding: 20px;
@@ -434,71 +434,70 @@ footer {
 .footer-content {
     display: flex;
     align-items: center;
-    width: 100%; /* Ensure the footer takes the full width */
+    width: 100%; 
 }
 
-/* Left Column Styles */
+
 .left-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text horizontally */
-    flex: 1; /* Take half of the available width */
+    align-items: center; 
+    text-align: center; 
+    flex: 1; 
 }
 
 .footer-logo {
-    width: 200px; /* Adjust the size as needed */
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
-    fill: #fff; /* Set the color of the SVG logo to white */
+    fill: #fff; 
     filter: invert(1);
 }
 
 .join-button {
-    background-color: #ff5722; /* Change to your desired button color */
+    background-color: #ff5722; 
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-top: 10px; /* Add margin to separate the button from the paragraph */
+    margin-top: 10px; 
 }
 
 .join-button:hover {
-    background-color: #e64a19; /* Change to your desired button hover color */
+    background-color: #e64a19; 
 }
 
 /* Right Column Styles */
 .right-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text horizontally */
-    flex: 1; /* Take half of the available width */
+    align-items: center; 
+    text-align: center; 
+    flex: 1; 
 }
 
 .right-content h3 {
-    margin-bottom: 10px; /* Add margin below the header */
-    font-size: 1.2em; /* Adjust the font size as needed */
+    margin-bottom: 10px; 
+    font-size: 1.2em; 
 }
 
-/* Social Media Icons Styles */
+
 .social-media-icons {
     display: flex;
-    flex-direction: column; /* Arrange icons vertically */
-    align-items: center; /* Center icons horizontally */
-    width: 100%; /* Ensure icons take the full width */
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
 }
 
 .social-media-icons a {
     color: #fff;
     text-decoration: none;
-    margin: 5px 0; /* Reduce space between icons vertically */
-    font-size: 24px; /* Adjust icon size as needed */
+    margin: 5px 0; 
+    font-size: 24px; 
 }
 
-/* Back to Top Button Styles */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -506,29 +505,29 @@ footer {
 }
 
 .arrow-circle {
-    background-color: #fff; /* White background color */
+    background-color: #fff; 
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #0074D9; /* Blue border */
+    border: 2px solid #0074D9; 
 }
 
 .arrow-circle:hover {
-    background-color: #fff; /* Maintain white background color on hover */
+    background-color: #fff; 
 }
 
 .arrow-circle i {
-    color: #0074D9; /* Blue arrow color */
+    color: #0074D9; 
     font-size: 20px;
 }
 
 
 
 .back-to-top a {
-    background-color: #333; /* Change to your desired button color */
+    background-color: #333; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -537,10 +536,9 @@ footer {
 }
 
 .back-to-top a:hover {
-    background-color: #555; /* Change to your desired button hover color */
+    background-color: #555; 
 }
 
-/* Show the Back to Top button when scrolling */
 body {
     position: relative;
 }
