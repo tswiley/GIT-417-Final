@@ -151,7 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (hasErrors) {
             event.preventDefault();
         } else {
+            event.preventDefault();
+
             alert("Thank you for contacting us! We look forward to working with you. Don't forget to add us on social media!");
+
+            form.reset();
         }
     });
 });
