@@ -123,6 +123,10 @@ html, body {
     background-color: black;
 }
 
+.dark-mode #switcher2 ul {
+    color: #fff;
+}
+
 .dark-mode body,
 .dark-mode #switcher2 h2,
 .dark-mode #switcher2 h3,
@@ -131,7 +135,7 @@ html, body {
 }
 
 .dark-mode #switcher2 .buttons {
-    background-color: white;
+    background-color: #ff5722;
     color: black;
 }
 
@@ -283,7 +287,7 @@ main > h2 {
 
 #switcher2 ul {
     justify-self: center;
-    color: #0056b3;
+    color: black;
     list-style: none;
     font-size: 25px;
 }
