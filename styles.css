@@ -206,6 +206,7 @@ main > h2 {
     font-size: 40px;
     color: #ff5722;
     margin: 0;
+    padding-top: 125px;
 }
 
 #welcome p {
