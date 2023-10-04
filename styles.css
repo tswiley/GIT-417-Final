@@ -1,8 +1,9 @@
 /*12 Column Grid (desktop layout, not mobile first) How to setup cards*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800;900&display=swap');
 
-html {
-    cursor: pointer;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -148,8 +149,15 @@ html {
 
 main {
     max-width: 100%;
-    padding-left: 10px;
+    margin: 0;
     padding-right: 10px;
+}
+
+#background-video {
+    grid-column: span 12;
+    width: 100vw; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 .gym-pic {
@@ -160,6 +168,7 @@ main {
 main img {
     width: 100%;
     border-radius: 6px;
+    margin-left: 10px;
 }
 
 main .welcome {
@@ -189,6 +198,18 @@ main > h2 {
     padding: 20px; 
 }
 
+#welcome h3 {
+    font-size: 40px;
+    color: #e64a19;
+    margin: 0;
+}
+
+#welcome p {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 20px
+}
+
 #welcome #heading  {
     display: grid;
     grid-column: span 12;
@@ -199,7 +220,6 @@ main > h2 {
 #welcome #heading h2 {
     grid-column: span 12;
     font-size: 50px;
-    justify-self: center;
     margin: 0;
     padding-bottom: 25px;
 }
@@ -239,6 +259,23 @@ main > h2 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .25fr 1fr;
     gap: 1rem;
+    margin: 10px 10px;
+}
+
+#switcher2 .currentItem {
+    justify-items: right;
+}
+
+#switcher2 .currentItem h3{
+    font-size: 40px;
+    color: #e64a19;
+    margin: 0;
+    padding-top: 20px;
+}
+
+#switcher2 .currentItem p {
+    font-size: 20px;
+    margin: 0;
 }
 
 .hiddenItem {
@@ -328,6 +365,7 @@ main > h2 {
 }
 #gameDisplay p {
     text-align: center;
+    font-size: 20px;
 }
 
 #numGuess {
