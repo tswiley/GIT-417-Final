@@ -1,7 +1,4 @@
-"use strict";
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Hide the gameOutput element
     const gameOutput = document.getElementById("gameOutput");
     gameOutput.style.display = "none";
 
@@ -17,11 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollToSection('#switcher2');
     });
 
-    // Add this code for smooth scrolling for the contact button at the top
     const contactLinkTop = document.querySelector('a[href="#contactUs"]');
     contactLinkTop.addEventListener('click', function (e) {
         e.preventDefault();
         scrollToSection('#contactUs');
+    });
+
+    const aboutLink = document.querySelector('a[href="#about"]');
+    aboutLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToSection('.welcome');
     });
 
     const modeSwitchButton = document.getElementById("modeSwitchButton");
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gameOutput.textContent = "OOPS SORRY!! TRY A GREATER NUMBER";
         }
 
-        gameOutput.style.display = "block"; // Show the gameOutput
+        gameOutput.style.display = "block";
         document.getElementById("numGuess").value = "";
     });
 
