@@ -13,6 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: 'smooth'
         });
     });
+
+    const joinUsButton = document.querySelector('.join-button');
+    joinUsButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const switcher2Section = document.querySelector('#switcher2');
+        const offsetTop = switcher2Section.offsetTop;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
