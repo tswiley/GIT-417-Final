@@ -234,7 +234,7 @@ main > h2 {
 }
 
 
-#switcher2 #heading2  {
+#switcher2 #heading2 {
     display: grid;
     grid-column: span 12;
     padding-bottom: 50px;
@@ -250,9 +250,12 @@ main > h2 {
     color:#ff5722;
 }
 
-
-
-
+#switcher2 #heading2 p {
+    display: grid;
+    grid-column: span 12;
+    font-size: 20px;
+    margin: 0;
+}
 
 #switcher2 .currentItem { 
     display: grid;
